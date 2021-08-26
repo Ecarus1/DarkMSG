@@ -1,0 +1,121 @@
+body{
+    background-color: #1D1D1D !important;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.registr_box{
+    display: flex;
+    justify-content: center;
+}
+
+.svg_box{
+    z-index: 2;
+    position: fixed;
+    margin-top: -35px;
+
+    /* box-shadow: 0px 69px 33px rgba(0, 0, 0, 0.45); */
+    filter: drop-shadow(0px 69px 50px #000000);
+}
+
+.registr_form{
+    z-index: 1000;
+    position: relative;
+}
+
+.name_company{
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    
+    text-shadow: 0 0 5px white,
+                0 0 10px white,
+                0 0 15px white,
+                0 0 20px rgb(155, 155, 155),
+                0 0 35px rgb(155, 155, 155),
+                0 0 40px rgb(155, 155, 155),
+                0 0 50px rgb(155, 155, 155),
+                0 0 75px rgb(155, 155, 155);
+    animation: glitch 4s ease-in-out infinite alternate;
+}
+
+@keyframes glitch {
+    0%,40%,44%,58%,61%,65%,69%,73%,100% {transform:skewX(0deg);}
+    41% {transform: skewX(10deg);}
+    42% {transform: skewX(-10deg);}
+}
+
+
+.registr_form input[type = "text"], .registr_form input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #707070;
+    padding: 14px 10px;
+    width: 280px;
+    height: 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    font-family: "Montserrat";
+    font-size: 30px;
+}
+
+.registr_form input[type = "text"]:focus, .registr_form input[type = "password"]:focus{
+    width: 360px;
+    border-color: #ffffff;
+    background-color: #1D1D1D;
+}
+
+.registr_form input[type = "submit"], .registr_form input[type = "button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #1D1D1D;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.registr_form input[type = "submit"]:hover{
+    background: #2e2e2e;
+}
+
+/* .registr_form input[type = "submit"]:disabled{
+    display: none;
+} */
+
+.input_info{
+    padding: 3px;
+}
+
+.login_and_name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.errors_box {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #2e2e2e;
+    color: #707070;
+
+}
